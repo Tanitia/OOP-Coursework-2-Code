@@ -97,7 +97,6 @@ public String getName(){
 };
 
     public String getCandidateID(){
-        System.out.println(this.candidateID);
         return this.candidateID;
 
     }
