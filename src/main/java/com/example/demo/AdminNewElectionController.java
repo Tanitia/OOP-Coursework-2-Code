@@ -26,6 +26,8 @@ import static java.util.Arrays.asList;
 
 
 public class AdminNewElectionController implements Initializable {
+
+    //instantiates to give and receive info to and from GUI
     @FXML
     private TextField NENameBox;
 @FXML
