@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminDeleteUsersController">
+   <children>
+      <Label layoutX="245.0" layoutY="54.0" text="Delete Users">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="147.0" text="User ID" />
+      <TextField fx:id="DUUserIDBox" layoutX="226.0" layoutY="143.0" promptText="Enter ID" />
+      <Button fx:id="DUDeleteButton" layoutX="275.0" layoutY="256.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete" />
+      <Button fx:id="DUBackButton" layoutX="280.0" layoutY="316.0" mnemonicParsing="false" onAction="#DUBack" text="Back" />
+      <Label fx:id="DUErrorLabel" layoutX="286.0" layoutY="200.0" textFill="#ac0202" />
+   </children>
+</AnchorPane>

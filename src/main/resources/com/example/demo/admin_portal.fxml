@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminPortalController">
+   <children>
+      <Label layoutX="242.0" layoutY="47.0" text="Admin Portal">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button id="APNEButton" fx:id="APNewElection" layoutX="46.0" layoutY="133.0" mnemonicParsing="false" onAction="#NewElectionGo" prefHeight="47.0" prefWidth="108.0" text="New Election" />
+      <Button id="APEEButton" fx:id="APEndElection" layoutX="442.0" layoutY="133.0" mnemonicParsing="false" onAction="#EndElectionGo" prefHeight="47.0" prefWidth="108.0" text="End Election" />
+      <Button id="APVRButton" fx:id="APViewResults" layoutX="46.0" layoutY="252.0" mnemonicParsing="false" onAction="#ViewResultsGo" prefHeight="47.0" prefWidth="108.0" text="View Results" />
+      <Button id="APAUButton" fx:id="APADeleteUsers" layoutX="442.0" layoutY="252.0" mnemonicParsing="false" onAction="#DeleteUsersGo" prefHeight="47.0" prefWidth="108.0" text="Delete User" />
+      <Button id="APLOButton" fx:id="APLogOut" layoutX="271.0" layoutY="327.0" mnemonicParsing="false" onAction="#redirectToVP" text="Log-out" />
+      <Button fx:id="APAddCandidates" layoutX="249.0" layoutY="180.0" mnemonicParsing="false" onAction="#redirectCreateCandidate" prefHeight="47.0" prefWidth="108.0" text="Add Candidates" />
+   </children>
+</AnchorPane>

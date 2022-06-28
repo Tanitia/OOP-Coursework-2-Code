@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ViewResultsController">
+   <children>
+      <Label layoutX="245.0" layoutY="51.0" text="View Results">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="135.0" text="Ended Elections" />
+      <ListView fx:id="VRElectionListview" layoutX="212.0" layoutY="135.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="VRBackButton" layoutX="473.0" layoutY="200.0" mnemonicParsing="false" onAction="#VRBackButton" text="Back" />
+      <Label fx:id="textLabel" layoutX="473.0" layoutY="117.0" text="Winner">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="VRWinnerLabel" layoutX="450.0" layoutY="152.0" text="Candidate name" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

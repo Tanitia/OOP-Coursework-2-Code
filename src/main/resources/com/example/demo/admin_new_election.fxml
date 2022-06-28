@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminNewElectionController">
+   <children>
+      <Label layoutX="242.0" layoutY="38.0" text="New Election">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="NENameBox" layoutX="226.0" layoutY="117.0" prefHeight="25.0" prefWidth="181.0" />
+      <Label layoutX="93.0" layoutY="121.0" text="Election Name" />
+      <Button fx:id="NECreateButton" layoutX="274.0" layoutY="200.0" mnemonicParsing="false" onAction="#createElection" text="Create" />
+      <Button fx:id="NEBackButton" layoutX="279.0" layoutY="275.0" mnemonicParsing="false" onAction="#returnToAdminPortal" text="Back" />
+      <Label fx:id="NEMessageLabel" layoutX="161.0" layoutY="240.0" text="Creating a new election will end any running election!" textFill="#cc0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="NEErrorLabel" layoutX="115.0" layoutY="173.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="electionTypeListView" layoutX="226.0" layoutY="158.0" prefHeight="30.0" prefWidth="181.0" />
+      <Label fx:id="electionTypeLabel" layoutX="90.0" layoutY="164.0" text="Election Type" />
+   </children>
+</AnchorPane>

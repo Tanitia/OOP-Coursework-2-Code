@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.EndElectionController">
+   <children>
+      <Label layoutX="246.0" layoutY="48.0" text="End Election">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="152.0" text="Once an election has been ended, it cannot be restarted!" textFill="#ce0000">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="EEConfirmButton" layoutX="259.0" layoutY="220.0" mnemonicParsing="false" onAction="#EndElection" text="End Election" />
+      <Button fx:id="EEBackButton" layoutX="280.0" layoutY="270.0" mnemonicParsing="false" onAction="#EEBack" text="Back" />
+   </children>
+</AnchorPane>

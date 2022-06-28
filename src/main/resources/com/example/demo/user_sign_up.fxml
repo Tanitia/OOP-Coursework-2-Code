@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.UserSignUpController">
+   <children>
+      <Label layoutX="244.0" layoutY="51.0" text="User sign-up">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="134.0" text="Name" />
+      <Label layoutX="128.0" layoutY="158.0" text="Address" />
+      <Label layoutX="120.0" layoutY="182.0" text="ID Number" />
+      <Label layoutX="124.0" layoutY="207.0" text="Password" />
+      <TextField id="USUName" fx:id="USUNameBox" layoutX="226.0" layoutY="130.0" promptText="Name" />
+      <TextField id="USUAddress" fx:id="USUAddressBox" layoutX="226.0" layoutY="154.0" promptText="Address" />
+      <TextField id="USUIDNum" fx:id="USUIDBox" layoutX="226.0" layoutY="178.0" promptText="ID Number" />
+      <TextField id="USUPassword" fx:id="USUPasswordBox" layoutX="226.0" layoutY="203.0" promptText="Password" />
+      <Button fx:id="USUOkay" layoutX="278.0" layoutY="307.0" mnemonicParsing="false" onAction="#confirmSignup" text="Okay" />
+      <Button fx:id="USUBackButton" layoutX="280.0" layoutY="344.0" mnemonicParsing="false" onAction="#USUGoBack" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.VotingScreenController">
+   <children>
+      <Label layoutX="249.0" layoutY="46.0" text="Voting Menu">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button fx:id="votingScreenButton" layoutX="437.0" layoutY="188.0" mnemonicParsing="false" onAction="#confirmVote" text="Vote" />
+      <ListView fx:id="votingCandidateListView" layoutX="90.0" layoutY="113.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="selectCandidateLabel" layoutX="413.0" layoutY="140.0" text="Select Candidate" />
+      <Button fx:id="VMBackButton" layoutX="437.0" layoutY="236.0" mnemonicParsing="false" onAction="#VMGoBack" text="Back" />
+   </children>
+</AnchorPane>
