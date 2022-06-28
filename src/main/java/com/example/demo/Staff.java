@@ -20,10 +20,13 @@ public class Staff extends User{
     protected String Username;
     protected String Password;
     public Staff(String Username, String Password){
+        //this constructor is used when the Admin logsin
         this.Username = Username;
         this.Password = Password;
     }
     public Staff(){
+        //this constructor can be used to access methods in other areas
+        //of the program after the admin has already logged in
         this.Username = "Username";
         this.Password = "Password";
     }

@@ -50,6 +50,7 @@ public void Increment() throws SQLException, FileNotFoundException {
     //if the election that is running is a First Past The Post type than checks if they have passed
     //the hard coded threshold than it automatically ends the election
     if(election.getElectionType().equals("First Past The Post") && this.numVotes == 10){
+        //creates an admin object to call endElection method from staff
         Staff admin = new Staff("Admin", "Admin");
         admin.endElection();
     }
