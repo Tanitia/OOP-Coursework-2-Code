@@ -37,6 +37,8 @@ public class AdminDeleteUsersController {
     @FXML
     private Label DUErrorLabel;
     public void deleteUser(ActionEvent actionEvent) throws IOException, SQLException {
+        //method handles enceptions
+        //boolean used similarly, but not identically, to message pass;
         boolean success = deleteUserMethod();
         if(success) {
             //page redirect
@@ -52,7 +54,9 @@ public class AdminDeleteUsersController {
     public boolean deleteUserMethod() throws FileNotFoundException, SQLException {
         //implements connection
         Connection sqlconn = dbConnection.getConnection();
+        //list of voter objects
         List<Voter> userList = new ArrayList<>();
+        //new voer object
         Voter user;
 
         String sqlStatement = "SELECT * FROM Voters";
@@ -77,6 +81,7 @@ public class AdminDeleteUsersController {
                 sqlStatement = "DELETE FROM Voters WHERE VoterID = (?)";//removes the Voter from the Database if they exist
                 PreparedStatement ps = sqlconn.prepareStatement(sqlStatement);
                 ps.setString(1, DUUserIDBox.getText());
+                //closes connection for security
                 ps.execute();
                 ps.close();
                 sqlconn.close();

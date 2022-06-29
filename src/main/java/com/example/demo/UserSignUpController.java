@@ -61,12 +61,13 @@ public class UserSignUpController {
     }
 
     public boolean voterSignup() throws FileNotFoundException, SQLException {
+        //connection object enables db access
         Connection sqlconn = dbConnection.getConnection();
         if (!USUNameBox.getText().equals("") && !USUAddressBox.getText().equals("")
                 && !USUIDBox.getText().equals("") && !USUPasswordBox.getText().equals("")) {//makes sure uner input isn't null
-            List<Voter> userList = new ArrayList<>();
-            Voter user;
-            sqlStatement = "SELECT * FROM Voters";
+            List<Voter> userList = new ArrayList<>(); //list of voter objects
+            Voter user; //new voter object
+            sqlStatement = "SELECT * FROM Voters"; //gets all info from voter table in db
             ResultSet rs = sqlconn.createStatement().executeQuery(sqlStatement);
             while (rs.next()) {//gets list of all voters
                 user= new Voter(rs.getString(1),rs.getString(2), rs.getString(3),
@@ -90,6 +91,7 @@ public class UserSignUpController {
     }
 
     public void USUGoBack(ActionEvent actionEvent) throws IOException {
+        //redirection
         root = FXMLLoader.load(getClass().getResource("voting_portal_landing.fxml"));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);

@@ -63,14 +63,17 @@ public class UserLoginController {
         }
     }
     public boolean confirmLogin() throws IOException, SQLException {
+        //connection object establishes connection to db
 
         Connection sqlconn = dbConnection.getConnection();
         sqlStatement = "SELECT * FROM Elections";
+        //creates object of Election class
         Election election;
+        //list of election objects
         List<Election>electionList = new ArrayList<>();
         ResultSet rs = sqlconn.createStatement().executeQuery(sqlStatement);
             while (rs.next()) {
-                //gets all elcetions from database to compare later
+                //gets all elections  from database to compare later
                 election = new Election(rs.getString(1), rs.getString(2),
                         Boolean.parseBoolean(rs.getString(3)), rs.getString(4));
                 electionList.add(election);
@@ -80,6 +83,7 @@ public class UserLoginController {
         if(!electionList.get(k).getElectionStatus()){//checks if an election is currently running
         List<Voter> userList = new ArrayList<>();
         Voter user;
+        //query to get all voter info from db
         sqlStatement = "SELECT * FROM Voters";
         rs = sqlconn.createStatement().executeQuery(sqlStatement);
         while (rs.next()) {

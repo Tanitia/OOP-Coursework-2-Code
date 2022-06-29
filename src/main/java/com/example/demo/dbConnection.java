@@ -3,10 +3,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+//class defined to improve ease of db access
 public class dbConnection {
 
-    private static final String SqCon = "jdbc:sqlite:VotingDatabase.db";
+    //locates db
 
+    private static final String SqCon = "jdbc:sqlite:VotingDatabase.db";
+    //connection object will be used to establish connection to db
     public static Connection getConnection() throws SQLException {
         //returns database connection
         try {

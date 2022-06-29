@@ -54,7 +54,7 @@ public class ViewResultsController implements Initializable {
     }
 
     public boolean viewResultsLogic() throws SQLException {
-        //establish connection to database
+        //establish connection to database using connection object
         Connection sqlconn = dbConnection.getConnection();
         String sqlStatement = "SELECT * FROM Elections";
         List<Election> electionList = new ArrayList<>();

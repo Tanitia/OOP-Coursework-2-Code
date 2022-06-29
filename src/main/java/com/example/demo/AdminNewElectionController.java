@@ -39,6 +39,8 @@ public class AdminNewElectionController implements Initializable {
 @FXML
     private Label electionTypeLabel;
 
+//lists of candidates and voters created
+
     List<Candidate> candidateList = new ArrayList<>();
     List<String> candidate;
 
@@ -51,7 +53,7 @@ public class AdminNewElectionController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {//runs on page launch
 
-        electionTypeListView.getItems().add("First Past The Post");//two types of election that curently exist
+        electionTypeListView.getItems().add("First Past The Post");//two types of election that currently exist
         electionTypeListView.getItems().add("Highest Votes Wins");
 
 

@@ -11,6 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Candidate {
+
+    //encapsulation to create a self containing, more secure class
+    //these private attributes can be accessed by the below public methods
+    //such as setters/getters
     private String candidateName;
 
     private String candidateDescription;
@@ -31,11 +35,15 @@ public class Candidate {
 
 }
 public void Increment() throws SQLException, FileNotFoundException {
+        //increases number of votes
         this.numVotes++;
         Update();//saves the state of the candidate class
+    //connection object used to establish connection to database
     Connection sqlconn = dbConnection.getConnection();
+    //all from elections
     String sqlStatement = "SELECT * FROM Elections";
 
+    //creates empty object from Election class
     Election election = null;
 
     //read all elections in database to find the one that is running
@@ -58,8 +66,9 @@ public void Increment() throws SQLException, FileNotFoundException {
 }
     public boolean Save() throws SQLException {
         //when adding a new candidate, it saves it to the database
+        //connection object establishes connection
         Connection sqlconn = dbConnection.getConnection();
-
+        //begins to prepare query for candidate insertion to database
         String sqlStatement = "INSERT INTO Candidates (Name, " +
                 "Description, ID, numVotes, Election) VALUES (?,?,?,?,?)";
         PreparedStatement ps = sqlconn.prepareStatement(sqlStatement);
@@ -76,8 +85,9 @@ public void Increment() throws SQLException, FileNotFoundException {
     public boolean Update() {
         try {
             //when a candidate gets a vote, updates the candidate's database entry
+            //object establishes db connection
             Connection sqlconn = dbConnection.getConnection();
-
+            //prepares query to update the candidate's own number of votes after they have been voted for
             String sqlStatement = "UPDATE Candidates SET numVotes = (?) WHERE ID = (?)";
             PreparedStatement ps = sqlconn.prepareStatement(sqlStatement);
 
@@ -92,14 +102,19 @@ public void Increment() throws SQLException, FileNotFoundException {
         }
         return true;
     }
+
+    //getter, enables encapsulation (improves security)
 public String getName(){
         return this.candidateName;
 };
 
     public String getCandidateID(){
+        //getter, enables encapsulation
         return this.candidateID;
 
     }
+
+    //getter for encapsulation
 
     public int getNumVotes(){
         return this.numVotes;
@@ -108,6 +123,10 @@ public String getName(){
         return this.electionName;
     }
     //comparator
+
+    //compare receives a candidate object as its parameter
+    //this is an example of message passing
+    //this enables objects to get each other to take action
     public Boolean compare(Candidate nextCandidate){
         return this.numVotes< nextCandidate.getNumVotes();
     }

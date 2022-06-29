@@ -11,11 +11,16 @@ import java.util.Scanner;
 
 import static java.util.Arrays.asList;
 
-
+//class inherits from User
+//inheritance allows for reusability, which can help reduce dev time
 public class Voter extends User {
+
+    //all private attributes - enables improved security and class to be self contained
+    //via encapsulation
     private String VoterID;
     private String Password;
     private Boolean hasVoted;
+    //numerous constructors enables solution robustness via polymorphism
     // constructor used when first creating a new voter
     public Voter(String Name, String Address, String VoterID, String Password) {
         this.Name = Name;
@@ -33,6 +38,8 @@ public class Voter extends User {
         this.hasVoted = hasVoted;
     }
 
+    //public getters and setters are able to access private attributes
+    //encapsulation
     public boolean gethasVoted(){
         return this.hasVoted;
     }

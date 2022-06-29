@@ -16,9 +16,17 @@ import java.util.Scanner;
 
 import static java.util.Arrays.asList;
 
+//inherits from user
+//inheritance increases usability of code
+//and therefore reduces dev time
 public class Staff extends User{
     protected String Username;
     protected String Password;
+
+    //different constructors used depending on circumstances
+    //this is an example of polymorphism
+    //polymorphism enables algorithms to interact with objects of the same class differently depending on
+    //circumstances such as available attributes
     public Staff(String Username, String Password){
         //this constructor is used when the Admin logsin
         this.Username = Username;
@@ -31,6 +39,8 @@ public class Staff extends User{
         this.Password = "Password";
     }
 
+    //public getters allow the access of protected and private attributes
+    //encapsulation - increases security
     public String getUsername(){
         return this.Username;
     }
