@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class VotingPortalLandingController {
 
-    //GUI and redirection values
+    //GUI and redirection values - mvc
     @FXML
     private Label welcomeText;
     private Stage stage;

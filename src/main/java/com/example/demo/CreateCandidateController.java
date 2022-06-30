@@ -27,7 +27,7 @@ public class CreateCandidateController {
     private Scene scene;
     private Parent root;
 
-    //initialises to pass info between controller and GUI
+    //initialises to pass info between controller and GUI - mvc
     @FXML
     private TextField ACNameBox;
     @FXML

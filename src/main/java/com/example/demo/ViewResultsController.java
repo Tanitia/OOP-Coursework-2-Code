@@ -30,7 +30,7 @@ import static java.util.Arrays.asList;
 
 public class ViewResultsController implements Initializable {
 
-    //to show and receive info in GUI
+    //to show and receive info in GUI - mvc design pattern
     @FXML
     private ListView<String> VRElectionListview;
 

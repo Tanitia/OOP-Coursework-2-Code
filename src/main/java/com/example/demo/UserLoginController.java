@@ -33,6 +33,8 @@ public class UserLoginController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    //mvc
     @FXML
     private TextField ULIIDBox;
 
@@ -45,6 +47,7 @@ public class UserLoginController {
 
     public void logInAction(ActionEvent actionEvent) throws IOException, SQLException {
         boolean success = confirmLogin();
+        //nav on success
         if (success) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("voting_screen.fxml"));
             Parent root = loader.load();

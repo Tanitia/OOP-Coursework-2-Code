@@ -27,7 +27,7 @@ import static java.util.Arrays.asList;
 
 public class AdminNewElectionController implements Initializable {
 
-    //instantiates to give and receive info to and from GUI
+    //instantiates to give and receive info to and from GUI - mvc design pattern
     @FXML
     private TextField NENameBox;
 @FXML

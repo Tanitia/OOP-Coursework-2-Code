@@ -41,7 +41,7 @@ public class VotingScreenController implements Initializable{
     private Scene scene;
     private Parent root;
 
-    //get and display data
+    //get and display data - mvc design pattern
 
     @FXML
     private ListView<String> votingCandidateListView;
@@ -75,7 +75,7 @@ public class VotingScreenController implements Initializable{
             }
             for (int k = 0; k < electionList.size(); k++) {
 
-                if (!electionList.get(k).getElectionStatus()) {//finds out which election iscurrently running
+                if (!electionList.get(k).getElectionStatus()) {//finds out which election is currently running
                     election = electionList.get(k);
                 }
             }

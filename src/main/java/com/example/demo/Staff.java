@@ -91,7 +91,7 @@ public class Staff extends User{
                                         (rs.getString(3)),
                                         rs.getInt(4), rs.getString(5));
                                 if(candidate.getElectionName().equals(electionList.get(i).getElectionName())){
-                                    candidateList.add(candidate);//Populates list with disks both game and music
+                                    candidateList.add(candidate);//Populates list
                                 }
 
                             }
@@ -398,7 +398,7 @@ public class Staff extends User{
                 candidate = new Candidate(rs.getString(1), rs.getString(2),
                         (rs.getString(3)),
                         rs.getInt(4), rs.getString(5));
-                candidateList.add(candidate);//Populates list with disks both game and music
+                candidateList.add(candidate);//Populates list
             }
             for (int i = 0; i < candidateList.size(); i++) {
                 if(candidateList.get(i).getCandidateID().equals(ACIDBox)){//tests if the user inputted candidate ID is Unique
@@ -443,7 +443,7 @@ public class Staff extends User{
                 candidate = new Candidate(rs.getString(1), rs.getString(2),
                         (rs.getString(3)),
                         rs.getInt(4), rs.getString(5));
-                candidateList.add(candidate);//Populates list with disks both game and music
+                candidateList.add(candidate);//Populates list
             }
             for (int i = 0; i < candidateList.size(); i++) {
                 if(candidateList.get(i).getCandidateID().equals(ACIDBox)){

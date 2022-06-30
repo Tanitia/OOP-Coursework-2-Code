@@ -30,7 +30,7 @@ public class AdminDeleteUsersController {
     private Scene scene;
     private Parent root;
 
-    //initialises to use and output info in GUI
+    //initialises to use and output info in GUI - mvc design pattern
     @FXML
     private TextField DUUserIDBox;
 

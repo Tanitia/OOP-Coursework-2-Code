@@ -59,7 +59,7 @@ public void Increment() throws SQLException, FileNotFoundException {
     //the hard coded threshold than it automatically ends the election
     if(election.getElectionType().equals("First Past The Post") && this.numVotes == 10){
         //creates an admin object to call endElection method from staff
-        Staff admin = new Staff("Admin", "Admin");
+        Staff admin = new Staff("Admin", "Admin"); //uses alternate constructor - polymorphism
         admin.endElection();
     }
 

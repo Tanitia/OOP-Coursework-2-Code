@@ -64,7 +64,7 @@ public class UserSignUpController {
         //connection object enables db access
         Connection sqlconn = dbConnection.getConnection();
         if (!USUNameBox.getText().equals("") && !USUAddressBox.getText().equals("")
-                && !USUIDBox.getText().equals("") && !USUPasswordBox.getText().equals("")) {//makes sure uner input isn't null
+                && !USUIDBox.getText().equals("") && !USUPasswordBox.getText().equals("")) {//makes sure user input isn't null
             List<Voter> userList = new ArrayList<>(); //list of voter objects
             Voter user; //new voter object
             sqlStatement = "SELECT * FROM Voters"; //gets all info from voter table in db
@@ -72,11 +72,11 @@ public class UserSignUpController {
             while (rs.next()) {//gets list of all voters
                 user= new Voter(rs.getString(1),rs.getString(2), rs.getString(3),
                 rs.getString(4), Boolean.parseBoolean(rs.getString(5)));
-                userList.add(user);//Populates list with disks both game and music
+                userList.add(user);
             }
             boolean uniqueID = true;
             for (int i = 0; i < userList.size(); i++) {
-                if (USUIDBox.getText().equals(userList.get(i).getVoterID())) {//tests if VoteId is unique
+                if (USUIDBox.getText().equals(userList.get(i).getVoterID())) {//tests if VoterID is unique
                     uniqueID = false;
                 }
             }
